@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculadora de Boletas de Honorarios</title>
+</head>
+<body>
+    <div class="general">
+        <div class="titulo">
+            <h1 class="glow">Calculadora de Boletas de Honorarios</h1>
+            <h2>Averigua el valor de tus boletas de honorarios en pesos chilenos</h2>
+        </div>
+
+        <div class="container">
+            <!-- Entrada de Datos -->
+            <div class="calcu">
+                <div class="inputs">
+                    <div class="input-group">
+                        <span class="currency-symbol">$</span>
+                        <input type="text" maxlength="10" id="campoTexto" placeholder="Ingresa el monto" autocomplete="off">
+                    </div>
+                    <div class="inputs">
+                      <label>Retención SII <span id="añoSeleccionado" class="dropdown-btn">2024</span>: 
+                          <span id="porcentajeRetencion">13.75%</span>
+                      </label>
+                      <div class="dropdown">
+                          <ul id="añoLista" class="dropdown-menu">
+                              <li data-porcentaje="10.75">2020</li>
+                              <li data-porcentaje="11.5">2021</li>
+                              <li data-porcentaje="12.25">2022</li>
+                              <li data-porcentaje="13">2023</li>
+                              <li data-porcentaje="13.75" class="active">2024</li>
+                              <li data-porcentaje="14.5">2025</li>
+                              <li data-porcentaje="15.25">2026</li>
+                              <li data-porcentaje="16">2027</li>
+                              <li data-porcentaje="17">2028</li>
+                          </ul>
+                      </div>
+                  </div>
+                  <p id="mensaje" class="error"></p>
+                </div>
+            </div>
+
+            <!-- Resultados -->
+            <div class="divDeDivs">
+                <!-- monto líquido -->
+                <div id="div1" class="resultado">
+                    <p>Si tu monto líquido es:</p>
+                    <span class="numero" id="liquidoMonto">$0</span>
+                    <h3>Retención SII:</h3>
+                    <span class="numero" id="retencionMonto1">$0</span>
+                    <h2>El BRUTO de la boleta es:</h2>
+                    <span class="resaltar" id="brutoMonto">$0</span>
+                </div>
+
+                <!--monto bruto -->
+                <div id="div2" class="resultado">
+                    <p>Si el BRUTO de la boleta es:</p>
+                    <span class="numero" id="brutoMonto2">$0</span>
+                    <h3>Retención SII:</h3>
+                    <span class="numero" id="retencionMonto2">$0</span>
+                    <h2>Tu monto líquido es:</h2>
+                    <span class="resaltar" id="liquidoMonto2">$0</span> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="boleta.js"></script>
+</body>
+</html>

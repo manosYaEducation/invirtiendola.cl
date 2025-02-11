@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Estilos generales */
+body {
+    background-image: url(bg_light.jpg);
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: #FFFFFF;
+}
+
+.general {
+    max-width: 75rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+.titulo {
+    background-color: rgba(93, 115, 126, 0.8);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: levitar 3s ease-in-out infinite alternate;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+@keyframes levitar {
+    0% { transform: translateY(5px); }
+    100% { transform: translateY(-5px); }
+}
+
+.titulo h1 {
+    font-size: 3rem;
+    color: #FFFFFF;
+    margin: 0;
+    text-shadow: 0 0 5px;
+}
+
+.titulo h2 {
+    font-size: 1.25rem;
+    color: #cecece;
+    margin-top: 0.5rem;
+    text-shadow: 0 0 5px #5D737E;
+}
+
+/* Contenedor principal */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos de inputs */
+.inputs {
+    text-align: center;
+}
+
+.inputs label {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2C2C2C;
+    margin-bottom: 0.75rem;
+}
+
+.inputs input {
+    width: 100%;
+    max-width: 20rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid black;
+    border-radius: 0.75rem;
+    font-size: 1.2rem;
+    text-align: center;
+    outline: none;
+    background: transparent;
+    color: black;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputs input::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+    opacity: 0.7;
+}
+
+.inputs input:focus {
+    border-color: #2C2C2C;
+    box-shadow: 0 0 10px rgba(93, 115, 126, 0.7);
+}
+
+/* Resultados */
+.divDeDivs {
+    background-color: rgba(93, 115, 126, 0.8);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    color: #FFFFFF;
+}
+
+.resultado {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    text-align: left;
+    flex: 1;
+    color: #ffffff;
+    text-shadow: 0 0 10px #B0B0B0;
+    font-size: 1.5rem;
+}
+
+.resultado p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.resultado h3, .resultado h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Mensaje de error */
+.error {
+    color: #5d737e56;
+    font-size: 1rem;
+    font-weight: bold;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-5px);
+    transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.5s ease;
+}
+
+.error.visible {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 3rem;
+}
+
+/* Input con símbolo de moneda */
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 22rem;
+    margin: 0 auto;
+}
+
+.currency-symbol {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.75rem;
+    color: #2C2C2C;
+    font-weight: bold;
+}
+
+/* Resaltado */
+.resaltar {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #a9ffff;
+    text-shadow: 0px 3px 5px rgba(143, 255, 246, 0.425);
+}
+
+.numero {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #a9ffff;
+    text-shadow: 0px 3px 5px rgba(143, 255, 246, 0.425);
+}
+
+/* Estilo del botón desplegable */
+.dropdown-btn {
+    cursor: pointer;
+    color: black;
+    text-shadow: 0px 3px 5px rgb(143, 255, 246);
+    font-weight: bold;
+    padding: 3px 5px;
+    transition: color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    color: #a9ffff;
+}
+
+/* Menú desplegable */
+.dropdown {
+    position: absolute;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.dropdown-menu li {
+    padding: 8px 15px;
+    cursor: pointer;
+    color: #333;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu li:hover {
+    background: #ddd;
+}
+
+.dropdown-menu .active {
+    font-weight: bold;
+    color: black;
+    text-shadow: 0px 3px 5px rgba(143, 255, 246, 0.425);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .titulo h1 { font-size: 2.5rem; }
+    .titulo h2 { font-size: 1rem; }
+    .divDeDivs { flex-direction: column; }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .titulo h1 { font-size: 2.75rem; }
+    .titulo h2 { font-size: 1.1rem; }
+    .inputs label { font-size: 1.4rem; }
+}
