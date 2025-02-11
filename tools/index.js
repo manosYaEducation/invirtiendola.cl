@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }    
 
     function actualizarResultados(valor) {
-        const totalBruto = valor * 1.19;
+        const totalBruto = valor;
         const ivaCalculado = valor * 0.19;
         const totalNeto = valor / 1.19;
         const ivaNeto = totalNeto * 0.19;

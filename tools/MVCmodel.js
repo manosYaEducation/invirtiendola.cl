@@ -1,0 +1,1 @@
+// interactúa los datos desde el controller, maneja logica y la devuelve al controlador
