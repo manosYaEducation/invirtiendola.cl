@@ -1,4 +1,10 @@
+import { Controlador } from "./Controlador/controller.js";
+
 document.addEventListener("DOMContentLoaded", () => {
+    Controlador.iniciar();
+});
+
+/* document.addEventListener("DOMContentLoaded", () => {
     const campoTexto = document.getElementById("campoTexto");
     const mensajeError = document.getElementById("mensaje");
 
@@ -54,3 +60,4 @@ document.addEventListener("DOMContentLoaded", () => {
         netoBruto.textContent = formatearCLP(totalNeto);
     }
 });
+ */
