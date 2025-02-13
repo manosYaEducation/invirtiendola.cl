@@ -1,4 +1,4 @@
-import { Controlador } from "./Controlador/controller.js";
+import { Controlador } from "../Controlador/controller.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     Controlador.iniciar();
