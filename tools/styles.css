@@ -33,8 +33,13 @@ body {
 }
 
 @keyframes levitar {
-    0% { transform: translateY(5px); }
-    100% { transform: translateY(-5px); }
+    0% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
 }
 
 .titulo h1 {
@@ -123,7 +128,8 @@ body {
     margin: 0;
 }
 
-.resultado h3, .resultado h2 {
+.resultado h3,
+.resultado h2 {
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -228,15 +234,99 @@ body {
     text-shadow: 0px 3px 5px rgba(143, 255, 246, 0.425);
 }
 
+/* Estilos para la sección de email */
+.email-section {
+    background-color: rgba(93, 115, 126, 0.8);
+    /* Mismo color que divDeDivs */
+    padding: 2rem;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.email-section input[type="email"] {
+    width: 100%;
+    max-width: 20rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.75rem;
+    font-size: 1.2rem;
+    text-align: center;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.email-section input[type="email"]::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.email-section input[type="email"]:focus {
+    border-color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.email-section button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.email-section button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Ajuste responsive */
+@media (max-width: 767px) {
+    .email-section {
+        padding: 1.5rem;
+    }
+
+    .email-section input[type="email"],
+    .email-section button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
 /* Responsive */
 @media (max-width: 767px) {
-    .titulo h1 { font-size: 2.5rem; }
-    .titulo h2 { font-size: 1rem; }
-    .divDeDivs { flex-direction: column; }
+    .titulo h1 {
+        font-size: 2.5rem;
+    }
+
+    .titulo h2 {
+        font-size: 1rem;
+    }
+
+    .divDeDivs {
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .titulo h1 { font-size: 2.75rem; }
-    .titulo h2 { font-size: 1.1rem; }
-    .inputs label { font-size: 1.4rem; }
+    .titulo h1 {
+        font-size: 2.75rem;
+    }
+
+    .titulo h2 {
+        font-size: 1.1rem;
+    }
+
+    .inputs label {
+        font-size: 1.4rem;
+    }
 }

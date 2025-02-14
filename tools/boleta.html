@@ -19,27 +19,28 @@
                 <div class="inputs">
                     <div class="input-group">
                         <span class="currency-symbol">$</span>
-                        <input type="text" maxlength="10" id="campoTexto" placeholder="Ingresa el monto" autocomplete="off">
+                        <input type="text" maxlength="10" id="campoTexto" placeholder="Ingresa el monto"
+                            autocomplete="off">
                     </div>
                     <div class="inputs">
-                      <label>Retención SII <span id="añoSeleccionado" class="dropdown-btn">2024</span>: 
-                          <span id="porcentajeRetencion">13.75%</span>
-                      </label>
-                      <div class="dropdown">
-                          <ul id="añoLista" class="dropdown-menu">
-                              <li data-porcentaje="10.75">2020</li>
-                              <li data-porcentaje="11.5">2021</li>
-                              <li data-porcentaje="12.25">2022</li>
-                              <li data-porcentaje="13">2023</li>
-                              <li data-porcentaje="13.75" class="active">2024</li>
-                              <li data-porcentaje="14.5">2025</li>
-                              <li data-porcentaje="15.25">2026</li>
-                              <li data-porcentaje="16">2027</li>
-                              <li data-porcentaje="17">2028</li>
-                          </ul>
-                      </div>
-                  </div>
-                  <p id="mensaje" class="error"></p>
+                        <label>Retención SII <span id="añoSeleccionado" class="dropdown-btn">2024</span>:
+                            <span id="porcentajeRetencion">13.75%</span>
+                        </label>
+                        <div class="dropdown">
+                            <ul id="añoLista" class="dropdown-menu">
+                                <li data-porcentaje="10.75">2020</li>
+                                <li data-porcentaje="11.5">2021</li>
+                                <li data-porcentaje="12.25">2022</li>
+                                <li data-porcentaje="13">2023</li>
+                                <li data-porcentaje="13.75" class="active">2024</li>
+                                <li data-porcentaje="14.5">2025</li>
+                                <li data-porcentaje="15.25">2026</li>
+                                <li data-porcentaje="16">2027</li>
+                                <li data-porcentaje="17">2028</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p id="mensaje" class="error"></p>
                 </div>
             </div>
 
@@ -62,8 +63,12 @@
                     <h3>Retención SII:</h3>
                     <span class="numero" id="retencionMonto2">$0</span>
                     <h2>Tu monto líquido es:</h2>
-                    <span class="resaltar" id="liquidoMonto2">$0</span> 
+                    <span class="resaltar" id="liquidoMonto2">$0</span>
                 </div>
+            </div>
+            <!--div de email-->
+            <div class="email-section">
+                <input type="email" id="emailDestino" placeholder="Ingresa tu correo electrónico" />
             </div>
         </div>
     </div>
